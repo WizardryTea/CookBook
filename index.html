@@ -11,280 +11,45 @@
     <!-- Заголовок страницы -->
     <title>CookBook - Кулинарные рецепты</title>
     <!-- icon-фавиконка .ico (после title в head)-->
-    <link rel="icon" type="image/png"href="img\favicon.png">
+    <link rel="icon" type="image/png"href="icons\hamster.png">
     <!--Подключаем наш файл стилей CSS-->
     <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
   <style>
-  /*-----------СПРАВКА-------------
-  width — ширина элемента;
-  height — высота элемента;
-  padding — внутренние отступы от контента до краёв элемента;
-  border — рамка, идущая по краю элемента;
-  margin — внешние отступы вокруг элемента
-  
-  #CDB891 - Основной цвет html
-  #e2d2b2 - Основной цвет контента
-  #351E10 - HICKORY для меню / красивый темно-серый
-  #2B1700 - CHOCOLATE - нажатая кнопка меню
-  #f2f2f2 - цвет шрифта меню (похож на белый)
-  #FF9933 - рыжий для кнопок банковской карты
-  #303030 - почти черный
-  */
-
-  /*---------------Шрифт-------------------------------*/
-  /*Для названия BookWorm*/
-  @import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
-  /*Для колонок с авторами*/
-  @import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Rubik+Dirt&display=swap');
-  /*Цитаты*/
-  @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-  /*Заголовки книг*/
-  @import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
-  /*-------------------------------------------------*/
-  /*               ОСНОВНЫЕ СТИЛИ                    */
-  /*-------------------------------------------------*/
-  html {
-    font-size: 16px; /*16 по умолчанию*/
-    font-family: 'Shantell Sans', cursive;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed; /*фон неподвижен при скроллинге*/
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  body {
-    margin: 0; /*отступы на странице*/
-    background-color: #CDB891;
-  }
-  h1 {
-    font-size: 36px;
-    margin: 0;
-    color: #CDB891;
-  }
-  h2 {
-    margin-top: 0;
-  }
-  .h2{
-    display: contents;
-  }
-  .sidebar {
-    float: right; /*обтекание справа*/
-    border: 1px solid #351E10; /*рамка левого меню*/
-    width: 20%; /*ширина левой колонки*/
-    padding: 5px; /*поля внутри блока */
-    margin: 10px 4px 20px 5px;
-    box-shadow: 0 0 10px;
-    box-shadow: #351E10;
-    background: #e2d2b2;
-  }
-  .content {
-    margin: 10px 25% 20px 5px; /*Значения отступа от правого блока*/
-    border-radius: 5px; /*скруглить углы*/
-    padding: 5px; /*Поля внутри блока*/
-    border: 1px solid #351E10; /*Рамка контента*/
-    box-shadow: 0 0 10px;
-    box-shadow: #351E10;
-    background: #e2d2b2;
-    box-shadow: 10px 10px 100px 0px #ccb07d;
-    box-shadow: inset 0px 0px 3px 0px #2B1700;
-  }
-  .main{
-    background-color: #CDB891;
-  }
-  /*-------------------------------------------------*/
-  /*                   SCROLL BAR                    */
-  /*-------------------------------------------------*/
-  ::-webkit-scrollbar {
-    width: 15px;
-    height: 15px;
-  }
-  ::-webkit-scrollbar-track {
-    background: #FF9933
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #9b3e00;
-  }
-  /*-------------------------------------------------*/
-  /*                     FOOTER                      */
-  /*-------------------------------------------------*/
-  .main {
-    flex: 1 0 auto;
-  }
-  .content{
-    min-height: 100vh;
-  }
-  .mega-box .content{
-    min-height: auto;
-  }
-  .footer {
-    background: #351E10;
-    padding: 5px;
-    color: #CDB891;
-    text-align: center;  
-    /*display: flex;
-    flex-direction: column;
-    min-height: 100vh;*/
-  }
-  .footer-line{
-    display: block;
-    text-align: center;
-  }
-  /*-------------------------------------------------*/
-  /*               СОЦИАЛЬНЫЕ ССЫЛКИ                 */
-  /*-------------------------------------------------*/
-  .social-media-list {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  ul.social-media-list img {
-    padding: 5px;
-    border-radius: 5px;
-    background-color: #e2d2b2;
-    width: 36px;
-    height: 36px;
-    border: 5px solid #351E10;
-  }
-  ul.social-media-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    font-size: 0px;
-  }
-  ul.social-media-list li {
-  display: inline-block;
-  margin: 2px;
-  }
-  ul.social-media-list img:hover {
-  background-color: antiquewhite;
-  }
-  /*-------------------------------------------------*/
-  /*               БОКОВОЕ МЕНЮ                      */
-  /*-------------------------------------------------*/
-  /*Боковое изображение*/
-  .sidebar .img-aside{
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    align-items: center;
-  }
-  .img-aside{
-    max-width: 100%;
-    height: auto;
-  }
-  ul {
-    list-style-type: none;
-  }
-  .sidebar {
-    background-color: #e2d2b2;
-    border-radius: 5px;
-    border-color: #351E10;
-    margin: 10px 4px 20px 5px;
-    box-shadow: inset 10px 10px 50px 0px #ccb07d;
-  }
-  .sidebar p{color: #666;}
-  .sidebar a{
-    text-decoration: none;
-    display: block;
-    padding: 20px;
-  }
-  .sidebar a:visited {color: #2B1700;}
-  .sidebar ul{
-    margin-bottom: 10px;
-    padding: 0;
-  }
-  .sidebar li{
-    text-align: center;
-    margin-bottom: 15px;
-    background-color: #f8e7d5;
-    border-radius: 7px;
-  }
-  /*наведение*/
-  .sidebar li:hover {
-    box-shadow: 0px 0px 15px 0px #2B1700;
-    background-color: #2b17004e;
-    transition: box-shadow background-color 0.9s ease;
-  }
-  .sidebar a:hover {
-    color: #f2f2f2;
-    text-decoration: dotted;
-    transition: font-size box-shadow background-color 0.9s ease;
-  }
-  .sidebar a:active {
-    color: #FF9933;
-  }
-  /*-------------------------------------------------*/
-  /*               МЕНЮ ВЕРХНЕЕ HEADER               */
-  /*-------------------------------------------------*/
-
-  .menu ul {
-  list-style-type: none;
-  margin:  0;
-  padding:  0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-.menu li {
-  float: left;
-}
-
-.menu li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding:  14px  16px;
-  text-decoration: none;
-}
-
-.menu li a:hover {
-  background-color: #111;
-}
-
+    
   </style>
-
-
-
-
-
-
-
-
-
   <body>
     <!--header/основное меню-->
     <div class="header">
-
-      <nav class="menu">
-        <ul>
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">О нас</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-      </nav>
-      
+      <!--Логотип и название-->
+      <div class="logo">
+        <img src="icons/hamster.png" alt="Логотип" class="logo-img">
+        <div class="logo-txt"><a href="index.html">CookBook - Кулинарные рецепты!</a></div>
+      </div>
       <!--Верхнее меню-->
-      <div class="menu">
-      <div class="logo"><a href="index.html">CookBook - Вкусные кулинарные рецепты</a></div>
+      <div class="menu-wrap">
+        <nav class="menu">
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="recipes.html">Рецепты</a></li>
+            <li><a href="about.html">О нас</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
     <!--sidebar/боковое меню-->
     <div class="sidebar">
       <ul>
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Рецепты</a></li>
-        <li><a href="#">Калькулятор</a></li>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="feedback.html">Обратная связь</a></li>
       </ul>
     </div>
     <!--content/контент-->
     <div class="content">    
-      <h2>Добро пожаловать на Наш сайт кулинарных рецептов!</h2>
-      <p>Наш сайт содержит уникальный калькулятор <a href="feedback.html">калькулятор</a> кулинарных рецептов.</p>
+      <h2>Добро пожаловать на сайт кулинарных рецептов!</h2>
+      <p>Наш сайт содержит уникальный калькулятор <a href="recipes.html">кулинарных рецептов</a>.</p>
       <p>Мы рады видеть Вас на нашем сайте и искренне надеемся на то, что у наших дорогих посетителей получится найти желаемые рецепты, подходящую под вкус и настроение.</p>
+      <img class="img-center" src="img/pot.png" alt="Кастрюля">
     </div>
     <!--footer/подвал сайта-->
     <div class="footer">
@@ -306,6 +71,7 @@
     <!--partial/scripts-->
     <script>
       //тут
+
     </script>
   </body>
 </html>
