@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <!-- Кодировка страницы-->
+    <meta charset="UTF-8">
+    <!-- Для совместимости с IE-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Для красивого отображения на мобильных устройствах-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Самая крупная электронная библиотека с большим количеством бесплатных книг для чтения, читайте онлайн книги без регистрации с компьютера или телефона." />
+    <!-- Заголовок страницы -->
+    <title>CookBook - Кулинарные рецепты</title>
+    <!-- icon-фавиконка .ico (после title в head)-->
+    <link rel="icon" type="image/png"href="icons\hamster.png">
+    <!--Подключаем наш файл стилей CSS-->
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+  </head>
+  <style>
+
+  </style>
+  <body>
+    <!--header/основное меню-->
+    <div class="header">
+      <!--Логотип и название-->
+      <div class="logo">
+        <img src="icons/hamster.png" alt="Логотип" class="logo-img">
+        <div class="logo-txt"><a href="index.html">CookBook - Кулинарные рецепты!</a></div>
+      </div>
+      <!--Верхнее меню-->
+      <div class="menu-wrap">
+        <nav class="menu">
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="recipes.html">Рецепты</a></li>
+            <li><a href="about.html">О нас</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!--sidebar/боковое меню-->
+    <div class="sidebar">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="feedback.html">Обратная связь</a></li>
+      </ul>
+    </div>
+    <!--content/контент-->
+    <div class="content">    
+      <!--ФИЛЬТРЫ-->
+      <div id="search-section">
+        <h2>Список доступных Рецептов</h2>
+        <div id="table-recipes"></div>
+        <h2>Книга Рецептов</h2>
+        <!--Поиск по названию-->
+        <p>Знаете что хотите приготовить и как называется это блюдо? </p>
+        <label for="search-box">Поиск по названию:</label>
+        <input type="text" id="search-box">
+
+        <!--Фильтр по типу-->
+        <p>На какой прием пищи Вы готовите?</p>
+        <p>Выберите тип приема пищи из предложенных разделов:</p>
+        <select id="recipe-type-filter">
+          <option value="">Все</option>
+        </select>
+
+        <!--Фильтр по ингредиентам-->
+        <p>Какие ингредиенты должен содержать этот рецепт? Можно выбирать несколько вариантов единвременно. Для этого в десктопной версии сайта достаточно зажать клавишу «Ctrl» при выборе вариантов поиска.</p>
+        <p>Фильтр по ингредиентам:</p>
+        <select id="recipe-ingredients-filter" multiple>
+          <!-- Добавляем множественный выбор -->
+        </select>
+        <!--<button id="change-quantity-btn">Изменить количество ингредиентов</button>-->
+      </div>
+
+      <!--<select id="recipe-ingredients-filter">
+        <option value="">Все</option>
+      </select>   
+      -->
+
+      <!--ВСЕ РЕЦЕПТЫ ТУТ-->
+      <div id="recipe-list"></div>
+
+
+      <!--<img class="img-center" src="img/pot.png" alt="Кастрюля">-->
+    </div>
+    <!--footer/подвал сайта-->
+    <div class="footer">
+      <p>НАШИ СОЦИАЛЬНЫЕ СЕТИ</p>
+      <ul class="social-media-list">
+        <li><a href="https://www.instagram.com"><img src="icons/insta.png" alt="Instagram" title="Instagram"></a></li>
+        <li><a href="https://web.whatsapp.com"><img src="icons/wt.png" alt="WhatsApp" title="WhatsAp"></a></li>
+        <li><a href="https://web.telegram.org"><img src="icons/tg.png" alt="Telegram" title="Telegram"></a></li>
+        <li><a href="https://www.facebook.com"><img src="icons/facebook.png" alt="facebook" title="facebook"></a></li>
+        <li><a href="https://vk.com"><img src="icons/vk.png" alt="VK" title="VK"></a></li>
+        <li><a href="https://github.com"><img src="icons/github.png" alt="GitHub" title="GitHub"></a></li>
+        <li><a href="https://www.youtube.com/"><img src="icons/youtube.png" alt="YouTube" title="Youtube"></a></li> 
+      </ul>
+      <div class="footer-line">&copy;CookBook 2024 - все права защищены.
+        <p>Копирование и распространение материалов с сайта разрешено только с указанием активной ссылки на источник. Мнение авторов и посетителей сайта может не совпадать с мнением редакции.</p>
+      </div>
+      <div class="footer-love">Сделано с любовью ❤️</div>
+    </div>
+    <!--partial/scripts-->
+    <!--<script src="scripts/script.js"></script>-->
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
