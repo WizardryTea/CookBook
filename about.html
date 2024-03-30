@@ -43,6 +43,11 @@
   transition: 0.9s;
 }
 /*------------------------------------*/
+.cc-btn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .cc {
   font-size: 22px;
   font-family: 'Courier New', Courier, monospace;
@@ -53,13 +58,6 @@
   padding: 20px;
   position: relative;
   width: 400px;
-}
-h2 {
-  font: 24px Impact;
-  color: #303030;
-  padding: 0;
-  margin-bottom: 0;
-  text-align: right;
 }
 span {
   text-transform: uppercase;
@@ -188,106 +186,112 @@ input:nth-child(4) {
   </div>
   <!--!content / контент-->
   <div class="content">
-    
+  <h2>Учитесь готовить с нами!</h2>
+  <p>На сайте Вы найдете вкусные, доступные и оригинальные рецепты домашней кухни, с любовью приготовленные хозяйкой сайта и нашими дорогими посетителями. Не волнуйтесь, если Вы не умеете готовить! Пусть это Вас не огорчает! Исправить это очень просто - почаще заглядывайте к нам в гости и Вы не только научитесь, но и полюбите готовку!</p>
+  <img class="img-center" src="img/no-problem-chef.png" alt="Шеф">
   <p>Донаты — тема, о которой сегодня слышали многие. Но что это такое, если объяснять без всяких сложностей? Донат — это процесс передачи денег или подарков в поддержку кого-то. Обычно это делается добровольно и без ожидания чего-то взамен.</p>
   <p>Представьте себе уличного музыканта. Вы проходите мимо, наслаждаетесь музыкой и оставляете монетку в его шляпе. В интернете донат работает почти так же. Если что-то понравилось, то вы можете отправить немного денег в знак благодарности. Позвольте другому человеку почувствовать Вашу поддержку!</p>
   <p>Так что если вы еще не знали, что такое донаты, теперь вы в курсе. Это не просто передача денег, это способ выразить уважение, благодарность и поддержку. Ведь в мире столько талантливых людей, которые заслуживают нашего признания. Конечно, донаты — это лишь один из множества способов выразить свои чувства. Но иногда одно маленькое действие может изменить чью-то жизнь!
   В мире много разных способов быть добрым, и донаты — лишь один из них. Но иногда, чтобы дать кому-то крылья, достаточно просто показать, что вы цените их труд.</p>
   <p>Поскольку сайт работает на добровольной основе Вы можете стать частью тех, благодаря кому он живет. Поддержите сайт с лучшими кулинарными рецептами!</p>
-  <div class="cc">
-    <h2>MasterCard</h2>
-    <span class="span-line">___________________________</span>
-    <div class="show-card">
-      <span class="instructions">НОМЕР КАРТЫ</span>
-      <div class="number">
-        <input type="text" maxlength="4" placeholder="- - - -">
-        <input type="text" maxlength="4" placeholder="- - - -">
-        <input type="text" maxlength="4" placeholder="- - - -">
-        <input type="text" maxlength="4" placeholder="- - - -">
-      </div>
-      <div class="date">
-        <span class="instructions valid">ДЕНЬ/ГОД</span>
-        <div class="selects-date selecters">
-          <div class="day-select">
-            <select id="dates">
-              <option value="">1</option>
-              <option value="">2</option>
-              <option value="">3</option>
-              <option value="">4</option>
-              <option value="">5</option>
-              <option value="">6</option>
-              <option value="">7</option>
-              <option value="">8</option>
-              <option value="">9</option>
-              <option value="">10</option>
-              <option value="">11</option>
-              <option value="">12</option>
-              <option value="">13</option>
-              <option value="">14</option>
-              <option value="">15</option>
-              <option value="">16</option>
-              <option value="">17</option>
-              <option value="">18</option>
-              <option value="">19</option>
-              <option value="">20</option>
-              <option value="">21</option>
-              <option value="">22</option>
-              <option value="">23</option>
-              <option value="">24</option>
-              <option value="">25</option>
-              <option value="">26</option>
-              <option value="">27</option>
-              <option value="">28</option>
-              <option value="">29</option>
-              <option value="">30</option>
-              <option value="">31</option>
-            </select>
-          </div>
-          <div class="year-select">
-            <select id="dates">
-              <option value="">10</option>
-              <option value="">11</option>
-              <option value="">12</option>
-              <option value="">13</option>
-              <option value="">14</option>
-              <option value="">15</option>
-              <option value="">16</option>
-              <option value="">17</option>
-              <option value="">18</option>
-              <option value="">19</option>
-              <option value="">20</option>
-              <option value="">21</option>
-              <option value="">22</option>
-              <option value="">23</option>
-              <option value="">24</option>
-              <option value="">25</option>
-              <option value="">26</option>
-              <option value="">27</option>
-              <option value="">28</option>
-              <option value="">29</option>
-              <option value="">30</option>
-            </select>
+  <img class="img-center" src="img/donate-2.jpg" alt="Донаты-1">
+  <div class="cc-btn">
+    <div class="cc">
+      <h2>MasterCard</h2>
+      <span class="span-line">___________________________</span>
+      <div class="show-card">
+        <span class="instructions">НОМЕР КАРТЫ</span>
+        <div class="number">
+          <input type="text" maxlength="4" placeholder="- - - -">
+          <input type="text" maxlength="4" placeholder="- - - -">
+          <input type="text" maxlength="4" placeholder="- - - -">
+          <input type="text" maxlength="4" placeholder="- - - -">
+        </div>
+        <div class="date">
+          <span class="instructions valid">ДЕНЬ/ГОД</span>
+          <div class="selects-date selecters">
+            <div class="day-select">
+              <select id="dates">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+                <option value="">6</option>
+                <option value="">7</option>
+                <option value="">8</option>
+                <option value="">9</option>
+                <option value="">10</option>
+                <option value="">11</option>
+                <option value="">12</option>
+                <option value="">13</option>
+                <option value="">14</option>
+                <option value="">15</option>
+                <option value="">16</option>
+                <option value="">17</option>
+                <option value="">18</option>
+                <option value="">19</option>
+                <option value="">20</option>
+                <option value="">21</option>
+                <option value="">22</option>
+                <option value="">23</option>
+                <option value="">24</option>
+                <option value="">25</option>
+                <option value="">26</option>
+                <option value="">27</option>
+                <option value="">28</option>
+                <option value="">29</option>
+                <option value="">30</option>
+                <option value="">31</option>
+              </select>
+            </div>
+            <div class="year-select">
+              <select id="dates">
+                <option value="">10</option>
+                <option value="">11</option>
+                <option value="">12</option>
+                <option value="">13</option>
+                <option value="">14</option>
+                <option value="">15</option>
+                <option value="">16</option>
+                <option value="">17</option>
+                <option value="">18</option>
+                <option value="">19</option>
+                <option value="">20</option>
+                <option value="">21</option>
+                <option value="">22</option>
+                <option value="">23</option>
+                <option value="">24</option>
+                <option value="">25</option>
+                <option value="">26</option>
+                <option value="">27</option>
+                <option value="">28</option>
+                <option value="">29</option>
+                <option value="">30</option>
+              </select>
+            </div>
           </div>
         </div>
+        <!-- Имя -->
+        <div class="name">
+          <input class="full-name" type="text" maxlength="" inputmode='numeric' placeholder="Иван(а) Иванов(а)">
+          <span class="instructions">ИМЯ ВЛАДЕЛЬЦА</span>
+        </div>
       </div>
-      <!-- Имя -->
-      <div class="name">
-        <input class="full-name" type="text" maxlength="" inputmode='numeric' placeholder="Иван(а) Иванов(а)">
-        <span class="instructions">ИМЯ ВЛАДЕЛЬЦА</span>
+      <div class="hide-card">
+        <p>Введите 3 цифры с оборота карты</p>
+        <span class="instructions">CVC</span>
+        <div class="CVC">
+          <input type="text" maxlength="3" placeholder="CVC">
+        </div>
       </div>
     </div>
-    <div class="hide-card">
-      <p>Введите 3 цифры с оборота карты</p>
-      <span class="instructions">CVC</span>
-      <div class="CVC">
-        <input type="text" maxlength="3" placeholder="CVC">
-      </div>
-    </div>
-  </div>
     <div class="button-sent">
       <button id="back">На главную сторону</button>
       <button id="continue">Перевернуть</button>
     </div>
+  </div>
+  <img class="img-center" src="img/thanks.png" alt="Донаты-2">
 </div>
   </div>
   <!--footer / подвал сайта-->
