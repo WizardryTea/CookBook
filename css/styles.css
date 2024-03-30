@@ -53,6 +53,7 @@ h1 {
 }
 h2 {
   margin-top: 0;
+  text-align: center;
 }
 .h2{
   display: contents;
@@ -68,15 +69,16 @@ h2 {
   background: #e2d2b2;
 }
 .content {
-  margin: 10px 25% 20px 5px; /*Значения отступа от правого блока*/
+  min-height: 100vh;
+  margin: 10px 25% 20px 10px; /*Значения отступа от правого блока*/
   border-radius: 5px; /*скруглить углы*/
-  padding: 5px; /*Поля внутри блока*/
+  padding: 15px; /*Поля внутри блока*/
   border: 1px solid #351E10; /*Рамка контента*/
   box-shadow: 0 0 10px;
   box-shadow: #351E10;
   background: #e2d2b2;
   box-shadow: 10px 10px 100px 0px #ccb07d;
-  box-shadow: inset 0px 0px 3px 0px #2B1700;
+  box-shadow: inset 0px 0px 5px 0px #2B1700;
 }
 .main{
   background-color: #CDB891;
@@ -99,12 +101,6 @@ h2 {
 /*-------------------------------------------------*/
 .main {
   flex: 1 0 auto;
-}
-.content{
-  min-height: 100vh;
-}
-.mega-box .content{
-  min-height: auto;
 }
 .footer {
   background: #351E10;
@@ -163,14 +159,14 @@ ul.social-media-list img:hover {
   max-width: 100%;
   height: auto;
 }
-ul {
+.sidebar ul {
   list-style-type: none;
 }
 .sidebar {
   background-color: #e2d2b2;
   border-radius: 5px;
   border-color: #351E10;
-  margin: 10px 4px 20px 5px;
+  margin: 10px 10px 20px 5px;
   box-shadow: inset 10px 10px 50px 0px #ccb07d;
 }
 .sidebar p{color: #666;}
@@ -221,14 +217,27 @@ ul {
   margin-right: 40px;
   height: 70px;
 }
+/*Цвет CookBook*/
+.logo a{
+  color: #5a2b0d;
+}
 /*-------------------------------------------------*/
 /*               МЕНЮ ВЕРХНЕЕ HEADER               */
 /*-------------------------------------------------*/
 .menu-wrap {
+  margin: 0px 10px;
+  height: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #351E10;
+  border-radius: 10px;
+  /*выпукный элемент*/
+  background: #9b3e00 radial-gradient(circle at 50% 0, #d18556, #351E10);
+  box-shadow:
+  inset #351E10 0 -6px 10px,
+  inset #5a2b0d 0 6px 10px,
+  rgba(0,0,0,.8) 0 3px 8px -3px;
 }
 .menu ul {
   list-style-type: none;
@@ -247,14 +256,16 @@ ul {
   text-decoration: none;
 }
 .menu li a:hover {
-  background-color: #ccab84;;
-  border-color: #5a2b0d;
+  background-color: #f8e7d5;
+  border-color: #ccb07d;
   border-radius: 7px;
-  border-style: groove;
+  border-style: outset;
   font-size: 18px;
   font-weight: 600;
-  color: #351E10;
+  color: #351E10;/*цвет шрифта*/
+  box-shadow: inset 10px 10px 50px 0px #ccb07d;
 }
+
 /*-------------------------------------------------*/
 /*              СТИЛИ ДЛЯ ИЗОБРАЖЕНИЙ              */
 /*-------------------------------------------------*/
@@ -265,5 +276,109 @@ ul {
   height: auto;
 }
 /*-------------------------------------------------*/
-/*                                                 */
+/*             ДЛЯ ПОИСКА И ФИЛЬТРОВ               */
 /*-------------------------------------------------*/
+
+/*-------------------------------------------------*/
+/*                     ПОИСК                       */
+/*-------------------------------------------------*/
+#search-box{
+  margin: 15px 0px 15px 0px;
+}
+#search-box, #recipe-type-filter {
+  box-sizing: border-box;/*внутренний отступ (padding) и граница (border) будут включены в общую ширину и высоту элемента, а не добавляться к ней*/
+  margin: 10px 0; /*внутренний отступ между элементами*/
+  padding: 20px 10px;
+  font-size: 1.15rem;
+  filter: drop-shadow(2px 2px 2px #5a2b0d);
+  border-radius: 0.25rem;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #caced1;
+  color: #000;
+  cursor: pointer;
+ }
+/*-------------------------------------------------*/
+/*             ФИЛЬТР ПО ИНГРЕДИЕНТАМ              */
+/*-------------------------------------------------*/
+/*Стилизация контейнера для <select>*/
+.select-multiple {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+}
+/*Стилизация самого элемента <select>*/
+#recipe-ingredients-filter {
+  font-size: 24px;
+  height: 300px;
+
+  width: 100%;
+  padding: 10px;
+  border: 6px solid #969696;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  appearance: none; /*удаление стандартного стиля браузера*/
+  cursor: pointer;
+}
+/*при наведении на область*/
+#recipe-ingredients-filter:hover {
+  border-color: #444343;
+}
+/*при фокусе (клике)*/
+#recipe-ingredients-filter:focus {
+  outline: none;
+  border-color: #5a2b0d;
+}
+/*для выбранных ингредиентов*/
+ #recipe-ingredients-filter option:checked {
+  background-color: #ccb07d;
+  color: #fff;
+}
+/*-------------------------------------------------*/
+/*               ДЛЯ КАЖДОГО РЕЦЕПТА               */
+/*-------------------------------------------------*/
+/*Книга рецептов и названия рецептов*/
+h3, .search-section p{
+  text-align: center;
+}
+/*Оформление ингредиентов*/
+.recipe li{
+  list-style-type: circle;
+}
+/*Границы для каждого рецепта*/
+label[for="search-box"] {
+  display: block;
+  margin-bottom: 10px;
+}
+/*Рамки для каждого рецепта*/
+.recipe {
+  border: 1px solid #2B1700;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+/*Верхняя строчка, содержащая название слева и картинку справа*/
+.recipe .name-and-img{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+/*картинка справа*/
+#recipe-list > div:nth-child(n) > div > img{
+  max-height: 120px;
+  max-width: 120px;
+}
+/*Стилизация*/
+.recipe {
+  padding: 15px;
+  margin: 5px;
+  border-color: #351E10;
+  min-width: 200px;
+  box-shadow: inset 10px 10px 100px 0px #ccb07d;
+}
+/*-------------------------------------------------*/
+/*            СТИЛИЗАЦИЯ СПИСКА РЕЦЕПТОВ           */
+/*-------------------------------------------------*/
+.recipe-list {
+  list-style: armenian; /*Убираем стандартные маркеры списка*/
+}
