@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Для красивого отображения на мобильных устройствах-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Самая крупная электронная библиотека с большим количеством бесплатных книг для чтения, читайте онлайн книги без регистрации с компьютера или телефона." />
+    <meta name="description" content="Электронный ресурс с доступом к бесплатным рецептам онлайн без регистрации с компьютера или телефона." />
     <!-- Заголовок страницы -->
     <title>CookBook - Кулинарные рецепты</title>
     <!-- icon-фавиконка .ico (после title в head)-->
@@ -16,7 +16,31 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
   <style>
-    
+  /*При переходе по ссылке списка она становится рыжей в момент клика*/
+  .content H3 li{
+    list-style-type:disc;
+    text-align: left;
+  }
+  .content H3 a {
+    color: #2B1700;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    line-height: 2;
+  }
+  .content H3 li a:hover {
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;/*удаление подчеркивания*/
+    font: 700;
+    border-color: #f8e7d5;
+    border-radius: 7px;
+    border-style: outset;
+    font-size: 18px;
+    font-weight: 600;
+    color: #5a2b0d;/*цвет шрифта*/
+    box-shadow: inset 10px 10px 50px 0px #ccb07d;
+  }
   </style>
   <body>
     <!--header/основное меню-->
@@ -31,7 +55,7 @@
         <nav class="menu">
           <ul>
             <li><a href="index.html">Главная</a></li>
-            <li><a href="recipes.html">Рецепты</a></li>
+            <li><a href="recipes.html">Книга рецептов</a></li>
             <li><a href="about.html">О нас</a></li>
           </ul>
         </nav>
@@ -50,7 +74,8 @@
       <p>Скорее ознакомьтесь с <a href="recipes.html"> рецептами кулинарных рецептов</a> на нашем сайте.</p>
       <p>Мы рады видеть Вас на нашем сайте и искренне надеемся на то, что у наших дорогих посетителей получится найти желаемые рецепты, подходящую под вкус и настроение.</p>
       <h2>Кулинарные хитрости</h2>
-      <h3>Категории яиц</h3>
+      <div id=".content H3"></div>
+      <h3 id="ind1">Категории яиц</h3>
       <p>Яйца делятся на&nbsp;категории в&nbsp;зависимости от&nbsp;массы. Руководствуемся простым правилом &nbsp;— <strong>чем больше цифра, тем меньше размер</strong>:</p>
       <ul>
         <li><strong>«С3»</strong>&nbsp;— самые маленькие яйца весом 35–44,9 г;</li>
@@ -60,19 +85,19 @@
         <li><strong>«СВ»</strong>&nbsp;— высшая категория весом более 75 грамм.</li>
       </ul>
       <img class="img-center" src="img/cook-egg.jpg" alt="Как правильно сварить яйцо">
-      <h3>Спасение засахаренного мёда</h3> 
+      <h3 id="ind2">Спасение засахаренного мёда</h3> 
       <p>Если Ваш мёд загустел или засахарился то растопите его на водяной бане. Для этого достаточно поставить емкость с мёдом в кастрюлю с горячей водой и подождать.</p>
       <img class="img-center" src="img/honey.jpeg" alt="Мед">
-      <h3>Идеальные котлетки</h3>
+      <h3 id="ind3">Идеальные котлетки</h3>
       <p>Для приготовления котлет идеальной круглой формы используйте любой обыкновенный стакан и прокручивая фарш для котлет внутри него круговыми движениями. Аналогичным образом можно приготовить сырники и иные изделия из теста.</p>
       <img class="img-center" src="img/kotleti.jpg" alt="Котлеты">
-      <h3>Вкусные классические сочетания</h3>
+      <h3 id="ind4">Вкусные классические сочетания</h3>
       <p>При готовке правильно учитывать сочетаемость ингредиентов. Несколько наиболее вкусных групп продуктов представлены ниже:</p>
       <ul>
         <li>Птица и фрукты: например, курица с ананасами, утка с яблоками/мандаринами.</li>
         <li>Рыба/курица/мясо с овощами: хорошие углеводы и белки.</li>
         <li>Помидоры, чеснок, болгарский перец: отличная основа для соусов.</li>
-        <li>Рыба и лимон: К пахучей добавляют лимон, чтобы сгладить слишком выраженный запах. К жирной рыбе - чтобы оттенить, убавить жирность. К нейтральной по вкусу рыбе - чтобы добавить ей кислинку и тонкий цитрусовый аромат. В рыбе содержатся полиненасыщенные жирные кислоты, которые лучше усваиваются в сочетании с аскорбиновой кислотой.</li>
+        <li>Рыба и лимон: К пахучей рыбе добавляют лимон, чтобы сгладить слишком выраженный запах. К жирной - чтобы оттенить, убавить жирность. К нейтральной по вкусу рыбе - чтобы добавить ей кислинку и тонкий цитрусовый аромат. В рыбе содержатся полиненасыщенные жирные кислоты, которые лучше усваиваются в сочетании с аскорбиновой кислотой.</li>
       </ul>
       <img class="img-center" src="img/lemon-fish.jpg" alt="Как правильно сварить яйцо">
       
@@ -86,7 +111,7 @@
         <li><a href="https://web.telegram.org"><img src="icons/tg.png" alt="Telegram" title="Telegram"></a></li>
         <li><a href="https://www.facebook.com"><img src="icons/facebook.png" alt="facebook" title="facebook"></a></li>
         <li><a href="https://vk.com"><img src="icons/vk.png" alt="VK" title="VK"></a></li>
-        <li><a href="https://github.com"><img src="icons/github.png" alt="GitHub" title="GitHub"></a></li>
+        <li><a href="https://wizardrytea.github.io/CookBook/"><img src="icons/github.png" alt="GitHub" title="GitHub"></a></li>
         <li><a href="https://www.youtube.com/"><img src="icons/youtube.png" alt="YouTube" title="Youtube"></a></li> 
       </ul>
       <div class="footer-line">&copy;CookBook 2024 - все права защищены.
@@ -95,5 +120,6 @@
       <div class="footer-love">Сделано с любовью ❤️</div>
     </div>
     <!--partial/scripts-->
+    <script src="scripts/script-index.js"></script>
   </body>
 </html>
