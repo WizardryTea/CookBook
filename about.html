@@ -7,324 +7,335 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Для красивого отображения на мобильных устройствах-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Самая крупная электронная библиотека с большим количеством бесплатных книг для чтения, читайте онлайн книги без регистрации с компьютера или телефона." />
+    <meta name="description" content="Электронный ресурс с доступом к бесплатным рецептам онлайн без регистрации с компьютера или телефона." />
     <!-- Заголовок страницы -->
-    <title>BookWorm - Электронная библиотека</title>
+    <title>CookBook - Кулинарные рецепты</title>
     <!-- icon-фавиконка .ico (после title в head)-->
-    <link rel="icon" type="image/png"href="img\favicon.png">
+    <link rel="icon" type="image/png"href="icons\hamster.png">
     <!--Подключаем наш файл стилей CSS-->
     <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <script src="js/main.js"></script>
   </head>
-<style>
-/*Кнопки На главную сторону и Перевернуть*/
-.button-sent {
-  margin-top: 10px;
-}
-.button-sent button {
-  border-radius: 3px;
-  border: none;
-  font-size: 13px;
-  padding: 5px 10px;
-  background: #FF9933;
-  color: white;
-  font-weight: bold;
-  box-shadow: 0px 2px 2px 2px rgba(255, 51, 0, 0.346);
-  position: relative;
-  transition: 0.3s;
-}
-.button-sent button:hover {
-  top: -1px;
-  cursor: pointer;
-  box-shadow: 0px 2px 1px 1px rgba(233, 3, 3, 0.876);
-}
-.button-sent button:active {
-  background:rgba(233, 3, 3, 0.876);
-  transition: 0.9s;
-}
-/*------------------------------------*/
-.cc-btn{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.cc {
-  font-size: 22px;
-  font-family: 'Courier New', Courier, monospace;
-  background: #8ea0a5;
-  border-radius: 20px;
-  height: 300px;
-  overflow: hidden;
-  padding: 20px;
-  position: relative;
-  width: 400px;
-}
-span {
-  text-transform: uppercase;
-}
-.number{
-  justify-content: center;
-}
-.number, .date {
-  margin-bottom: 10px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.number{
-  flex-wrap: nowrap;
-}
-.provider {
-  display: inline-block;
-  margin: 0 10px 10px 0;
-  width: 71px;
-  height: 44px;
-}
-input {
-  background: rgba(241, 239, 255, 0.5);
-  border: 0;
-  border-radius: 4px;
-  font: 20px;
-  color: #303030;
-  margin: 0 2px 3px 0;
-  padding: 8px 10px;
-  text-align: center;
-  width: 24%;
-  box-shadow: 2px 2px 0px 2px #303030;
-  position: relative;
-  z-index: 10;
-}
-input:hover {
-  box-shadow: 0px 0px 20px rgba(41, 38, 59, 0.5);
-}
-input:nth-child(4) {
-  margin-right: 0;
-}
-
-.valid {
-  position: relative;
-  margin-right: 10px;
-  margin-bottom: 6px;
-}
-.selects-date select {
-  padding: 3px;
- border-style: groove;
- border-radius: 4px;
- background-color: #a6b4b8;
-}
-
-.selects-date select:focus {
- outline: none;
- border-color: #ff7b00;
-}
-
-.full-name {
-  width: 90%;
-  text-align: left;
-}
-
-.instructions {
-  font: 12px;
-  color: #fad8ac;
-}
-
-.selects-date{
-  display: flex;
-  flex-direction: row;
-}
-.hide-card {
- display: none;
-}
-.show-card {
- display: block;
-}
-@media screen and (max-width: 560px) {
+  <style>
+  /*Кнопки На главную сторону и Перевернуть*/
+  .button-sent {
+    margin-top: 10px;
+  }
+  .button-sent button {
+    border-radius: 3px;
+    border: none;
+    font-size: 13px;
+    padding: 5px 10px;
+    background: #FF9933;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 2px 2px 2px rgba(255, 51, 0, 0.346);
+    position: relative;
+    transition: 0.3s;
+  }
+  .button-sent button:hover {
+    top: -1px;
+    cursor: pointer;
+    box-shadow: 0px 2px 1px 1px rgba(233, 3, 3, 0.876);
+  }
+  .button-sent button:active {
+    background:rgba(233, 3, 3, 0.876);
+    transition: 0.9s;
+  }
+  /*------------------------------------*/
+  .cc-btn{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .cc {
-    font-size: 12px;
-    padding: 5px;
-    width: auto;
-    min-width: 215px;
+    font-size: 22px;
+    font-family: 'Courier New', Courier, monospace;
+    background: #8ea0a5;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 20px;
+    padding-bottom: 40px;
+    max-width: 400px;
   }
-  .cc h2{
-    margin-right: 20px;
-    margin-top: 20px;
+  span {
+    text-transform: uppercase;
   }
-  .button-sent{
-    font-size: 10px;
+  .number, .date {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  .number{flex-wrap: nowrap;}
+  .date {flex-wrap: wrap;}
+  .provider {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    width: 71px;
+    height: 44px;
+  }
+  input {
+    background: rgba(241, 239, 255, 0.5);
+    border: 0;
+    border-radius: 4px;
+    font: 20px;
+    color: #303030;
+    margin: 0 2px 3px 0;
+    padding: 8px 10px;
+    text-align: center;
+    width: 24%;
+    box-shadow: 2px 2px 0px 2px #303030;
+    position: relative;
+    z-index: 10;
+  }
+  input:hover {
+    box-shadow: 0px 0px 20px rgba(41, 38, 59, 0.5);
+  }
+  input:nth-child(4) {
+    margin-right: 0;
+  }
+
+  .valid {
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 6px;
+  }
+  .selects-date select {
+    padding: 3px;
+  border-style: groove;
+  border-radius: 4px;
+  background-color: #a6b4b8;
+  }
+
+  .selects-date select:focus {
+  outline: none;
+  border-color: #ff7b00;
+  }
+
+  .full-name {
+    width: 90%;
+    text-align: left;
+  }
+
+  .instructions {
+    font: 12px;
+    color: #fad8ac;
+  }
+
+  .selects-date{
+    display: flex;
+    flex-direction: row;
+  }
+  .hide-card {
+  display: none;
+  }
+  .show-card {
+  display: block;
   }
   .span-line{
-    font-size: 22px;
+    border-top: 1px solid #303030;
+    padding-bottom: 5px;
   }
-}
-</style>
-
-<body>
-  <!--header/основное меню-->
-  <div class="header">
-    <!--Логотип и название-->
-    <div class="logo">
-      <img src="icons/hamster.png" alt="Логотип" class="logo-img">
-      <div class="logo-txt"><a href="index.html">CookBook - Кулинарные рецепты!</a></div>
+  @media screen and (max-width: 560px) {
+    .cc {
+      font-size: 12px;
+      padding: 15px;
+      width: 80%;
+      height: 80%;
+      padding-bottom: 10px;
+    }
+    .cc h2{
+      margin-right: 0px;
+      margin-top: 20px;
+    }
+    .button-sent{
+      font-size: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+    #back{
+      margin-bottom: 20px;
+    }
+    .cc{
+    display: flex;
+    flex-direction: column;
+    min-width: none;
+    height: none;
+    }
+    /*Элемент карта не больше основного контента*/
+    #cc-btn{
+      display: unset;
+      align-items: stretch;
+    }
+  }
+  </style>
+  <body>
+    <!--header/основное меню-->
+    <div class="header">
+      <!--Логотип и название-->
+      <div class="logo">
+        <img src="icons/hamster.png" alt="Логотип" class="logo-img">
+        <div class="logo-txt"><a href="index.html">CookBook - Кулинарные рецепты!</a></div>
+      </div>
+      <!--Верхнее меню-->
+      <div class="menu-wrap">
+        <nav class="menu">
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="recipes.html">Книга рецептов</a></li>
+            <li><a href="about.html">О нас</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
-    <!--Верхнее меню-->
-    <div class="menu-wrap">
-      <nav class="menu">
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="recipes.html">Рецепты</a></li>
-          <li><a href="about.html">О нас</a></li>
-        </ul>
-      </nav>
+    <!--sidebar/боковое меню-->
+    <div class="sidebar">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="feedback.html">Обратная связь</a></li>
+      </ul>
     </div>
-  </div>
-  <!--sidebar/боковое меню-->
-  <div class="sidebar">
-    <ul>
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="feedback.html">Обратная связь</a></li>
-    </ul>
-  </div>
-  <!--!content / контент-->
-  <div class="content">
-  <h2>Учитесь готовить с нами!</h2>
-  <p>На сайте Вы найдете вкусные, доступные и оригинальные рецепты домашней кухни, с любовью приготовленные хозяйкой сайта и нашими дорогими посетителями. Не волнуйтесь, если Вы не умеете готовить! Пусть это Вас не огорчает! Исправить это очень просто - почаще заглядывайте к нам в гости и Вы не только научитесь, но и полюбите готовку!</p>
-  <img class="img-center" src="img/no-problem-chef.png" alt="Шеф">
-  <p>Донаты — тема, о которой сегодня слышали многие. Но что это такое, если объяснять без всяких сложностей? Донат — это процесс передачи денег или подарков в поддержку кого-то. Обычно это делается добровольно и без ожидания чего-то взамен.</p>
-  <p>Представьте себе уличного музыканта. Вы проходите мимо, наслаждаетесь музыкой и оставляете монетку в его шляпе. В интернете донат работает почти так же. Если что-то понравилось, то вы можете отправить немного денег в знак благодарности. Позвольте другому человеку почувствовать Вашу поддержку!</p>
-  <p>Так что если вы еще не знали, что такое донаты, теперь вы в курсе. Это не просто передача денег, это способ выразить уважение, благодарность и поддержку. Ведь в мире столько талантливых людей, которые заслуживают нашего признания. Конечно, донаты — это лишь один из множества способов выразить свои чувства. Но иногда одно маленькое действие может изменить чью-то жизнь!
-  В мире много разных способов быть добрым, и донаты — лишь один из них. Но иногда, чтобы дать кому-то крылья, достаточно просто показать, что вы цените их труд.</p>
-  <p>Поскольку сайт работает на добровольной основе Вы можете стать частью тех, благодаря кому он живет. Поддержите сайт с лучшими кулинарными рецептами!</p>
-  <img class="img-center" src="img/donate-2.jpg" alt="Донаты-1">
-  <div class="cc-btn">
-    <div class="cc">
-      <h2>MasterCard</h2>
-      <span class="span-line">___________________________</span>
-      <div class="show-card">
-        <span class="instructions">НОМЕР КАРТЫ</span>
-        <div class="number">
-          <input type="text" maxlength="4" placeholder="- - - -">
-          <input type="text" maxlength="4" placeholder="- - - -">
-          <input type="text" maxlength="4" placeholder="- - - -">
-          <input type="text" maxlength="4" placeholder="- - - -">
-        </div>
-        <div class="date">
-          <span class="instructions valid">ДЕНЬ/ГОД</span>
-          <div class="selects-date selecters">
-            <div class="day-select">
-              <select id="dates">
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4</option>
-                <option value="">5</option>
-                <option value="">6</option>
-                <option value="">7</option>
-                <option value="">8</option>
-                <option value="">9</option>
-                <option value="">10</option>
-                <option value="">11</option>
-                <option value="">12</option>
-                <option value="">13</option>
-                <option value="">14</option>
-                <option value="">15</option>
-                <option value="">16</option>
-                <option value="">17</option>
-                <option value="">18</option>
-                <option value="">19</option>
-                <option value="">20</option>
-                <option value="">21</option>
-                <option value="">22</option>
-                <option value="">23</option>
-                <option value="">24</option>
-                <option value="">25</option>
-                <option value="">26</option>
-                <option value="">27</option>
-                <option value="">28</option>
-                <option value="">29</option>
-                <option value="">30</option>
-                <option value="">31</option>
-              </select>
+    <!--!content / контент-->
+    <div class="content">
+      <h2>Учитесь готовить с нами!</h2>
+      <p>На сайте Вы найдете вкусные, доступные и оригинальные рецепты домашней кухни, с любовью приготовленные хозяйкой сайта и нашими дорогими посетителями. Не волнуйтесь, если Вы не умеете готовить! Пусть это Вас не огорчает! Исправить это очень просто - почаще заглядывайте к нам в гости и Вы не только научитесь, но и полюбите готовку!</p>
+      <img class="img-center" src="img/no-problem-chef.png" alt="Шеф">
+      <p>Донаты — тема, о которой сегодня слышали многие. Но что это такое, если объяснять без всяких сложностей? Донат — это процесс передачи денег или подарков в поддержку кого-то. Обычно это делается добровольно и без ожидания чего-то взамен.</p>
+      <p>Представьте себе уличного музыканта. Вы проходите мимо, наслаждаетесь музыкой и оставляете монетку в его шляпе. В интернете донат работает почти так же. Если что-то понравилось, то вы можете отправить немного денег в знак благодарности. Позвольте другому человеку почувствовать Вашу поддержку!</p>
+      <p>Так что если вы еще не знали, что такое донаты, теперь вы в курсе. Это не просто передача денег, это способ выразить уважение, благодарность и поддержку. Ведь в мире столько талантливых людей, которые заслуживают нашего признания. Конечно, донаты — это лишь один из множества способов выразить свои чувства. Но иногда одно маленькое действие может изменить чью-то жизнь!
+      В мире много разных способов быть добрым, и донаты — лишь один из них. Но иногда, чтобы дать кому-то крылья, достаточно просто показать, что вы цените их труд.</p>
+      <p>Поскольку сайт работает на добровольной основе Вы можете стать частью тех, благодаря кому он живет. Поддержите сайт с лучшими кулинарными рецептами!</p>
+      <img class="img-center" src="img/donate-2.jpg" alt="Донаты-1">
+      <div class="cc-btn">
+        <div class="cc">
+          <h2>MasterCard</h2>
+          <span class="span-line"></span>
+          <div class="show-card">
+            <span class="instructions">НОМЕР КАРТЫ</span>
+            <div class="number">
+              <input type="text" id="num-1" maxlength="4" placeholder="- - - -">
+              <input type="text" id="num-2" maxlength="4" placeholder="- - - -">
+              <input type="text" id="num-3" maxlength="4" placeholder="- - - -">
+              <input type="text" id="num-4" maxlength="4" placeholder="- - - -">
             </div>
-            <div class="year-select">
-              <select id="dates">
-                <option value="">10</option>
-                <option value="">11</option>
-                <option value="">12</option>
-                <option value="">13</option>
-                <option value="">14</option>
-                <option value="">15</option>
-                <option value="">16</option>
-                <option value="">17</option>
-                <option value="">18</option>
-                <option value="">19</option>
-                <option value="">20</option>
-                <option value="">21</option>
-                <option value="">22</option>
-                <option value="">23</option>
-                <option value="">24</option>
-                <option value="">25</option>
-                <option value="">26</option>
-                <option value="">27</option>
-                <option value="">28</option>
-                <option value="">29</option>
-                <option value="">30</option>
-              </select>
+            <div class="date">
+              <span class="instructions valid">ДЕНЬ/ГОД</span>
+              <div class="selects-date selecters">
+                <div class="day-select">
+                  <select id="dates-1">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                    <option value="">7</option>
+                    <option value="">8</option>
+                    <option value="">9</option>
+                    <option value="">10</option>
+                    <option value="">11</option>
+                    <option value="">12</option>
+                    <option value="">13</option>
+                    <option value="">14</option>
+                    <option value="">15</option>
+                    <option value="">16</option>
+                    <option value="">17</option>
+                    <option value="">18</option>
+                    <option value="">19</option>
+                    <option value="">20</option>
+                    <option value="">21</option>
+                    <option value="">22</option>
+                    <option value="">23</option>
+                    <option value="">24</option>
+                    <option value="">25</option>
+                    <option value="">26</option>
+                    <option value="">27</option>
+                    <option value="">28</option>
+                    <option value="">29</option>
+                    <option value="">30</option>
+                    <option value="">31</option>
+                  </select>
+                </div>
+                <div class="year-select">
+                  <select id="dates-2">
+                    <option value="">10</option>
+                    <option value="">11</option>
+                    <option value="">12</option>
+                    <option value="">13</option>
+                    <option value="">14</option>
+                    <option value="">15</option>
+                    <option value="">16</option>
+                    <option value="">17</option>
+                    <option value="">18</option>
+                    <option value="">19</option>
+                    <option value="">20</option>
+                    <option value="">21</option>
+                    <option value="">22</option>
+                    <option value="">23</option>
+                    <option value="">24</option>
+                    <option value="">25</option>
+                    <option value="">26</option>
+                    <option value="">27</option>
+                    <option value="">28</option>
+                    <option value="">29</option>
+                    <option value="">30</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <!-- Имя -->
+            <div class="name">
+              <input class="full-name" type="text" id="name-owner" maxlength="" inputmode='numeric' placeholder="Иван(а) Иванов(а)">
+              <span class="instructions">ИМЯ ВЛАДЕЛЬЦА</span>
+            </div>
+          </div>
+          <div class="hide-card">
+            <p>Введите 3 цифры с оборота карты</p>
+            <span class="instructions">CVC</span>
+            <div class="CVC">
+              <input type="text" id="CVC" maxlength="3" placeholder="CVC">
             </div>
           </div>
         </div>
-        <!-- Имя -->
-        <div class="name">
-          <input class="full-name" type="text" maxlength="" inputmode='numeric' placeholder="Иван(а) Иванов(а)">
-          <span class="instructions">ИМЯ ВЛАДЕЛЬЦА</span>
+        <div class="button-sent">
+          <button id="back">На главную сторону</button>
+          <button id="continue">Перевернуть</button>
         </div>
       </div>
-      <div class="hide-card">
-        <p>Введите 3 цифры с оборота карты</p>
-        <span class="instructions">CVC</span>
-        <div class="CVC">
-          <input type="text" maxlength="3" placeholder="CVC">
-        </div>
+      <img class="img-center" src="img/thanks.png" alt="Донаты-2">
+      <p>Отдельное спасибо сервису <a href="https://www.flaticon.com/ru/free-icons/flaticon" title="flaticon иконки">Flaticon</a> за предоставленные иконки от Freepik.</p>
+    </div> <!--Закрывает content-->
+    <!--footer / подвал сайта-->
+    <div class="footer">
+      <p>НАШИ СОЦИАЛЬНЫЕ СЕТИ</p>
+      <ul class="social-media-list">
+        <li><a href="https://www.instagram.com"><img src="icons/insta.png" alt="Instagram" title="Instagram"></a></li>
+        <li><a href="https://web.whatsapp.com"><img src="icons/wt.png" alt="WhatsApp" title="WhatsAp"></a></li>
+        <li><a href="https://web.telegram.org"><img src="icons/tg.png" alt="Telegram" title="Telegram"></a></li>
+        <li><a href="https://www.facebook.com"><img src="icons/facebook.png" alt="facebook" title="facebook"></a></li>
+        <li><a href="https://vk.com"><img src="icons/vk.png" alt="VK" title="VK"></a></li>
+        <li><a href="https://wizardrytea.github.io/CookBook/"><img src="icons/github.png" alt="GitHub" title="GitHub"></a></li>
+        <li><a href="https://www.youtube.com/"><img src="icons/youtube.png" alt="YouTube" title="Youtube"></a></li> 
+      </ul>
+      <div class="footer-line">&copy;CookBook 2024 - все права защищены.
+        <p>Копирование и распространение материалов с сайта разрешено только с указанием активной ссылки на источник. Мнение авторов и посетителей сайта может не совпадать с мнением редакции.</p>
       </div>
+      <div class="footer-love">Сделано с любовью ❤️</div>
     </div>
-    <div class="button-sent">
-      <button id="back">На главную сторону</button>
-      <button id="continue">Перевернуть</button>
-    </div>
-  </div>
-  <img class="img-center" src="img/thanks.png" alt="Донаты-2">
-</div>
-  </div>
-  <!--footer / подвал сайта-->
-  <div class="footer">
-    <p>НАШИ СОЦИАЛЬНЫЕ СЕТИ</p>
-    <ul class="social-media-list">
-      <li><a href="https://www.instagram.com"><img src="icons/insta.png" alt="Instagram" title="Instagram"></a></li>
-      <li><a href="https://web.whatsapp.com"><img src="icons/wt.png" alt="WhatsApp" title="WhatsAp"></a></li>
-      <li><a href="https://web.telegram.org"><img src="icons/tg.png" alt="Telegram" title="Telegram"></a></li>
-      <li><a href="https://www.facebook.com"><img src="icons/facebook.png" alt="facebook" title="facebook"></a></li>
-      <li><a href="https://vk.com"><img src="icons/vk.png" alt="VK" title="VK"></a></li>
-      <li><a href="https://github.com"><img src="icons/github.png" alt="GitHub" title="GitHub"></a></li>
-      <li><a href="https://www.youtube.com/"><img src="icons/youtube.png" alt="YouTube" title="Youtube"></a></li> 
-    </ul>
-    <div class="footer-line">&copy;CookBook 2024 - все права защищены.
-      <p>Копирование и распространение материалов с сайта разрешено только с указанием активной ссылки на источник. Мнение авторов и посетителей сайта может не совпадать с мнением редакции.</p>
-    </div>
-    <div class="footer-love">Сделано с любовью ❤️</div>
-  </div>
-  <!-- partial / scripts / подключения на все скрипты тут -->
-  <script>
-    /*Кнопка перевернуть*/
-    document.addEventListener('DOMContentLoaded', function() {
-   document.getElementById('continue').addEventListener('click', function() {
-       document.querySelector('.show-card').style.display = 'none';
-       document.querySelector('.hide-card').style.display = 'block';
-   });
+    <!-- partial / scripts / подключения на все скрипты тут -->
+    <script>
+      /*Кнопка перевернуть*/
+      document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('continue').addEventListener('click', function() {
+        document.querySelector('.show-card').style.display = 'none';
+        document.querySelector('.hide-card').style.display = 'block';
+    });
 
-   document.getElementById('back').addEventListener('click', function() {
-       document.querySelector('.show-card').style.display = 'block';
-       document.querySelector('.hide-card').style.display = 'none';
-   });
-  });
-  </script>
- </body>
+    document.getElementById('back').addEventListener('click', function() {
+        document.querySelector('.show-card').style.display = 'block';
+        document.querySelector('.hide-card').style.display = 'none';
+    });
+    });
+    </script>
+  </body>
 </html>
