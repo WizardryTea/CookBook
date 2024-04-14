@@ -306,6 +306,13 @@ ul.social-media-list img:hover {
 /*                    МЕДИА                        */
 /*-------------------------------------------------*/
 @media screen and (max-width: 850px) {
+  .logo-txt{font-size: 16px;}
+  .menu-wrap{
+    font-size: 10px;
+  }
+  .sidebar > ul > li:nth-child(1) > a, .sidebar > ul > li:nth-child(2) > a{
+    padding: 5px;
+  }
   /*-------------------------------------------------*/
   /*                 ОБЩИЕ СТИЛИ                     */
   /*-------------------------------------------------*/
@@ -349,10 +356,11 @@ ul.social-media-list img:hover {
   margin: 10px 10px 20px 10px;
   box-shadow: inset 10px 10px 50px 0px #ccb07d;
 }
+/*при недостаточном месте поковое меню закрепляется в верхней части экрана*/
 @media (max-width: 1300px) {
   .sidebar-l, .sidebar, .content {
     width: auto;
-    margin: 10px 25% 20px 25%;
+    margin: 10px;
     float:none;
     flex-direction: column;
   }
