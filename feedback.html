@@ -7,267 +7,267 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Для красивого отображения на мобильных устройствах-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Самая крупная электронная библиотека с большим количеством бесплатных книг для чтения, читайте онлайн книги без регистрации с компьютера или телефона." />
+    <meta name="description" content="Электронный ресурс с доступом к бесплатным рецептам онлайн без регистрации с компьютера или телефона." />
     <!-- Заголовок страницы -->
-    <title>BookWorm - Электронная библиотека</title>
+    <title>CookBook - Кулинарные рецепты</title>
     <!-- icon-фавиконка .ico (после title в head)-->
-    <link rel="icon" type="image/png"href="img\favicon.png">
+    <link rel="icon" type="image/png"href="icons\hamster.png">
     <!--Подключаем наш файл стилей CSS-->
     <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
-<style>
-form {
- max-width: 600px;
- width: 100%;
- margin: 0 auto;
- box-sizing: border-box;
- padding: 20px;
- font-family: Arial, sans-serif;
-}
-form p {
- margin: 0 0 20px;
-}
-form label {
- display: block;
- margin-bottom: 5px;
-}
-form input[type="text"],
-form input[type="tel"],
-form input[type="email"],
-form input[type="password"],
-form input[type="datetime-local"],
-form select,
-form input[type="file"] {
- width: 100%;
- padding: 10px;
- border: 1px solid #351E10;
- border-radius: 4px;
- box-sizing: border-box;
-}
-fieldset label, fieldset input[type="checkbox"] {
- display: inline-block;
-}
-form input[type="checkbox"],
-form input[type="radio"] {
- margin: 0 5px 0 0;
- float: left;
-}
-form fieldset {
- margin: 0 0 20px;
- padding: 0;
- border: none;
-}
-form fieldset legend {
- padding: 0;
- font-weight: bold;
-}
-form button[type="submit"] {
- padding: 10px 20px;
- background-color: #351E10;
- border-color: #ccab84;
- color: white;
- border: none;
- border-radius: 4px;
- cursor: pointer;
-}
-form button[type="submit"]:hover{
-  background-color:#ccab84;
-}
-@media screen and (max-width: 600px) {
- form p {
-   margin-bottom: 15px;
- }
-}
-.topic-text{
+  <style>
+  form {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  }
+  form p {
+  margin: 0 0 20px;
+  }
+  form label {
+  display: block;
+  margin-bottom: 5px;
+  }
+  form input[type="text"],
+  form input[type="tel"],
+  form input[type="email"],
+  form input[type="password"],
+  form input[type="datetime-local"],
+  form select,
+  form input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #351E10;
+  border-radius: 4px;
+  box-sizing: border-box;
+  }
+  fieldset label, fieldset input[type="checkbox"] {
+  display: inline-block;
+  }
+  form input[type="checkbox"],
+  form input[type="radio"] {
+  margin: 0 5px 0 0;
+  float: left;
+  }
+  form fieldset {
+  margin: 0 0 20px;
+  padding: 0;
+  border: none;
+  }
+  form fieldset legend {
+  padding: 0;
+  font-weight: bold;
+  }
+  form button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #351E10;
+  border-color: #ccab84;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+  form button[type="submit"]:hover{
+    background-color:#ccab84;
+  }
+  @media screen and (max-width: 600px) {
+  form p {
+    margin-bottom: 15px;
+  }
+  }
+  .topic-text{
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 4px;
+    text-decoration-color: #351E10;
+  }
+  .center-text {
   text-align: center;
-  text-decoration: underline;
-  text-decoration-style: wavy;
-  text-decoration-thickness: 4px;
-  text-decoration-color: #351E10;
-}
-.center-text {
- text-align: center;
-}
-.emoji {
- display: flex;
- justify-content: center;
-}
-.emoji img, .emoji .img-emoji1:hover {
- width: 290px;
- background-size: contain;
-}
-.img-emoji1 {
-  object-fit: contain;
-  background-image: url("img/like-off.png");
-}
-.img-emoji1:hover {
-  background-image: url("img/like-on.png");
-}
-.img-emoji2 {
-  background-image: url("img/dislike-off.png");
-}
-.img-emoji2:hover {
-  background-image: url("img/dislike-on.png");
-}
-@media screen and (max-width: 750px) {
+  }
+  .emoji {
+  display: flex;
+  justify-content: center;
+  }
   .emoji img, .emoji .img-emoji1:hover {
-  width: 125px;
+  width: 290px;
   background-size: contain;
-}
-}
-</style>
+  }
+  .img-emoji1 {
+    object-fit: contain;
+    background-image: url("img/like-off.png");
+  }
+  .img-emoji1:hover {
+    background-image: url("img/like-on.png");
+  }
+  .img-emoji2 {
+    background-image: url("img/dislike-off.png");
+  }
+  .img-emoji2:hover {
+    background-image: url("img/dislike-on.png");
+  }
+  @media screen and (max-width: 750px) {
+    .emoji img, .emoji .img-emoji1:hover {
+    width: 125px;
+    background-size: contain;
+  }
+  }
+  </style>
 
-<body>
-  <!--header/основное меню-->
-  <div class="header">
-    <!--Логотип и название-->
-    <div class="logo">
-      <img src="icons/hamster.png" alt="Логотип" class="logo-img">
-      <div class="logo-txt"><a href="index.html">CookBook - Кулинарные рецепты!</a></div>
-    </div>
-    <!--Верхнее меню-->
-    <div class="menu-wrap">
-      <nav class="menu">
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="recipes.html">Рецепты</a></li>
-          <li><a href="about.html">О нас</a></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <!--sidebar/боковое меню-->
-  <div class="sidebar">
-    <ul>
-      <li><a href="index.html">Главная</a></li>
-      <li><a href="feedback.html">Обратная связь</a></li>
-    </ul>
-  </div>
-  <!--!content / контент-->
-  <div class="content">
-    <div class="form-content">
-      <div class="topic-text"><h2>Отправьте нам сообщение о Вашем опыте на сайте</h2></div>
-      <form name=forma1 action="" method="get">
-        <p>
-          <label for="name">Введите имя*:</label>
-          <input type="text"
-          name="name"
-          id="name"
-          autocomplete="on"
-          required
-          placeholder="Введите Ваше имя"
-          >
-        </p>
-        <p>
-          <label for="phone">Введите мобильный телефон:</label>
-          <input type="tel" name="phone" id="phone" autocomplete="on" placeholder="+7 (000) - 000 - 00 - 00">
-        </p>
-        <p>
-          <label for="mail">Введите email*:</label>
-          <input type="email" name="mail" id="mail" autocomplete="on" required placeholder="my_mail@mail.ru">
-        </p>
-        <p>
-          <label for="pass">Введите пароль от Вашей учетной записи*:</label>
-          <input
-            type="password"
-            name="pass"
-            id="pass"
-            required
-            minlength="4"
-            maxlength="30"
-            autocomplete="on"
-            pattern="1234"
-            placeholder="(от 4 до 30 символов)"
-          >
-          <!--pattern Регулярная проверка значения input элемента-->
-        </p>
-        <fieldset>
-          <legend>Выберите любимые типы блюд: </legend>
-          <div cl1>
-            <label for="cb">Закуски: бутерброды</label>
-            <input type="checkbox" name="cb" id="cb">
-          </div>
-          <div cl2>
-            <label for="cb">Первые блюда</label>
-            <input type="checkbox" name="cb" id="cb">
-          </div>
-          <div cl3>
-            <label for="cb">Вторые блюда</label>
-            <input type="checkbox" name="cb" id="cb">
-          </div>
-          <div cl4>
-            <label for="cb">Морепродукты</label>
-            <input type="checkbox" name="cb" id="cb">
-          </div>
-          <div cl5>
-            <label for="cb">Напитки</label>
-            <input type="checkbox" name="cb" id="cb">
-          </div>
-          <div cl6>
-            <label for="cb">Десерты</label>
-            <input type="checkbox" name="cb" id="cb">
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>Выберите пол:</legend>
-          <div clm>
-            <label for="rad">Мужской</label>
-            <input type="radio" name="rad" id="rad">
-          </div>
-          <div clw>
-            <label for="rad">Женский</label>
-            <input type="radio" name="rad" id="rad">
-          </div>
-          <div cln>
-            <label for="rad">Неопознанный</label>
-            <input type="radio" name="rad" id="rad">
-          </div>
-        </fieldset>
-        <p>
-          <label for="det">Введите год рождения:</label>
-          <input type="datetime-local" name="det" id="det">
-        </p>
-        <p>
-          <label for="q1">Выберите город проживания:</label>
-          <select name="city" id="city-select" size="1">
-            <option value="">-- Выберите город --</option>
-            <option value="Mosk">Москва</option>
-            <option value="Kaz">Казань</option>
-            <option value="Che1">Челябинск</option>
-            <option value="Che2">Чехов</option>
-            <option value="Ca">Саратов</option>
-            <option value="Dr">Другое</option>
-          </select>
-        </p>
-        <p>
-          <label for="f">Прикрепите фотографию (если возникла проблема):</label>
-          <input type="file" name="f" id="f">
-        </p>
-        <button type="submit">Отправить обращение</button>
-      </form>
-      <div class="center-text">Благодарим за Ваш отзыв о сайте!</div>
-      <div class="emoji">
-        <img src="img/like-off.png" class="img-emoji1">
-        <img src="img/dislike-off.png" class="img-emoji2">
+  <body>
+    <!--header/основное меню-->
+    <div class="header">
+      <!--Логотип и название-->
+      <div class="logo">
+        <img src="icons/hamster.png" alt="Логотип" class="logo-img">
+        <div class="logo-txt"><a href="index.html">CookBook - Кулинарные рецепты!</a></div>
       </div>
-  </div>
-  </div>
-  <!--footer / подвал сайта-->
-  <div class="footer">
-    <p>НАШИ СОЦИАЛЬНЫЕ СЕТИ</p>
-    <ul class="social-media-list">
-      <li><a href="https://www.instagram.com"><img src="icons/insta.png" alt="Instagram" title="Instagram"></a></li>
-      <li><a href="https://web.whatsapp.com"><img src="icons/wt.png" alt="WhatsApp" title="WhatsAp"></a></li>
-      <li><a href="https://web.telegram.org"><img src="icons/tg.png" alt="Telegram" title="Telegram"></a></li>
-      <li><a href="https://www.facebook.com"><img src="icons/facebook.png" alt="facebook" title="facebook"></a></li>
-      <li><a href="https://vk.com"><img src="icons/vk.png" alt="VK" title="VK"></a></li>
-      <li><a href="https://github.com"><img src="icons/github.png" alt="GitHub" title="GitHub"></a></li>
-      <li><a href="https://www.youtube.com/"><img src="icons/youtube.png" alt="YouTube" title="Youtube"></a></li> 
-    </ul>
-    <div class="footer-line">&copy;CookBook 2024 - все права защищены.
-      <p>Копирование и распространение материалов с сайта разрешено только с указанием активной ссылки на источник. Мнение авторов и посетителей сайта может не совпадать с мнением редакции.</p>
+      <!--Верхнее меню-->
+      <div class="menu-wrap">
+        <nav class="menu">
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="recipes.html">Книга рецептов</a></li>
+            <li><a href="about.html">О нас</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
-    <div class="footer-love">Сделано с любовью ❤️</div>
-  </div>
- </body>
+    <!--sidebar/боковое меню-->
+    <div class="sidebar">
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="feedback.html">Обратная связь</a></li>
+      </ul>
+    </div>
+    <!--!content / контент-->
+    <div class="content">
+      <div class="form-content">
+        <div class="topic-text"><h2>Отправьте нам сообщение о Вашем опыте на сайте</h2></div>
+        <form name=forma1 action="" method="get">
+          <p>
+            <label for="name">Введите имя*:</label>
+            <input type="text"
+            name="name"
+            id="name"
+            autocomplete="on"
+            required
+            placeholder="Введите Ваше имя"
+            >
+          </p>
+          <p>
+            <label for="phone">Введите мобильный телефон:</label>
+            <input type="tel" name="phone" id="phone" autocomplete="on" placeholder="+7 (000) - 000 - 00 - 00">
+          </p>
+          <p>
+            <label for="mail">Введите email*:</label>
+            <input type="email" name="mail" id="mail" autocomplete="on" required placeholder="my_mail@mail.ru">
+          </p>
+          <p>
+            <label for="pass">Введите пароль от Вашей учетной записи*:</label>
+            <input
+              type="password"
+              name="pass"
+              id="pass"
+              required
+              minlength="4"
+              maxlength="30"
+              autocomplete="on"
+              pattern="1234"
+              placeholder="(от 4 до 30 символов)"
+            >
+            <!--pattern Регулярная проверка значения input элемента-->
+          </p>
+          <fieldset>
+            <legend>Выберите любимые типы блюд: </legend>
+            <div cl1>
+              <label for="cb">Закуски: бутерброды</label>
+              <input type="checkbox" name="cb" id="cb">
+            </div>
+            <div cl2>
+              <label for="cb">Первые блюда</label>
+              <input type="checkbox" name="cb" id="cb">
+            </div>
+            <div cl3>
+              <label for="cb">Вторые блюда</label>
+              <input type="checkbox" name="cb" id="cb">
+            </div>
+            <div cl4>
+              <label for="cb">Морепродукты</label>
+              <input type="checkbox" name="cb" id="cb">
+            </div>
+            <div cl5>
+              <label for="cb">Напитки</label>
+              <input type="checkbox" name="cb" id="cb">
+            </div>
+            <div cl6>
+              <label for="cb">Десерты</label>
+              <input type="checkbox" name="cb" id="cb">
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Выберите пол:</legend>
+            <div clm>
+              <label for="rad">Мужской</label>
+              <input type="radio" name="rad" id="rad">
+            </div>
+            <div clw>
+              <label for="rad">Женский</label>
+              <input type="radio" name="rad" id="rad">
+            </div>
+            <div cln>
+              <label for="rad">Неопознанный</label>
+              <input type="radio" name="rad" id="rad">
+            </div>
+          </fieldset>
+          <p>
+            <label for="det">Введите год рождения:</label>
+            <input type="datetime-local" name="det" id="det">
+          </p>
+          <p>
+            <label for="q1">Выберите город проживания:</label>
+            <select name="city" id="city-select" size="1">
+              <option value="">-- Выберите город --</option>
+              <option value="Mosk">Москва</option>
+              <option value="Kaz">Казань</option>
+              <option value="Che1">Челябинск</option>
+              <option value="Che2">Чехов</option>
+              <option value="Ca">Саратов</option>
+              <option value="Dr">Другое</option>
+            </select>
+          </p>
+          <p>
+            <label for="f">Прикрепите фотографию (если возникла проблема):</label>
+            <input type="file" name="f" id="f">
+          </p>
+          <button type="submit">Отправить обращение</button>
+        </form>
+        <div class="center-text">Благодарим за Ваш отзыв о сайте!</div>
+        <div class="emoji">
+          <img src="img/like-off.png" class="img-emoji1">
+          <img src="img/dislike-off.png" class="img-emoji2">
+        </div>
+    </div>
+    </div>
+    <!--footer / подвал сайта-->
+    <div class="footer">
+      <p>НАШИ СОЦИАЛЬНЫЕ СЕТИ</p>
+      <ul class="social-media-list">
+        <li><a href="https://www.instagram.com"><img src="icons/insta.png" alt="Instagram" title="Instagram"></a></li>
+        <li><a href="https://web.whatsapp.com"><img src="icons/wt.png" alt="WhatsApp" title="WhatsAp"></a></li>
+        <li><a href="https://web.telegram.org"><img src="icons/tg.png" alt="Telegram" title="Telegram"></a></li>
+        <li><a href="https://www.facebook.com"><img src="icons/facebook.png" alt="facebook" title="facebook"></a></li>
+        <li><a href="https://vk.com"><img src="icons/vk.png" alt="VK" title="VK"></a></li>
+        <li><a href="https://wizardrytea.github.io/CookBook/"><img src="icons/github.png" alt="GitHub" title="GitHub"></a></li>
+        <li><a href="https://www.youtube.com/"><img src="icons/youtube.png" alt="YouTube" title="Youtube"></a></li> 
+      </ul>
+      <div class="footer-line">&copy;CookBook 2024 - все права защищены.
+        <p>Копирование и распространение материалов с сайта разрешено только с указанием активной ссылки на источник. Мнение авторов и посетителей сайта может не совпадать с мнением редакции.</p>
+      </div>
+      <div class="footer-love">Сделано с любовью ❤️</div>
+    </div>
+  </body>
 </html>
