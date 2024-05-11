@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="css/styles.css" type="text/css">
   </head>
   <style>
-  @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Russo+One&display=swap');
 /*-------------------------------------------------*/
 /*             ДЛЯ ПОИСКА И ФИЛЬТРОВ               */
 /*-------------------------------------------------*/
@@ -152,7 +151,7 @@ label[for="search-box"] {
 Используем атрибутные селекторы (позволяют выбирать элементы на основе значений их атрибутов)
 [id^='buttonCountMinus-'],[id^='buttonCountNumber-'], [id^='buttonCountPlus-']*/
  
-#showSelectedIngredients, #recipe-list button, [id^='buttonCountMinus-'], [id^='buttonCountPlus-']
+#reset-filters, #showSelectedIngredients, #recipe-list button, [id^='buttonCountMinus-'], [id^='buttonCountPlus-']
 {
   padding: 10px;
   font-size: 20px;
@@ -165,6 +164,10 @@ label[for="search-box"] {
   font-weight: 600;
   color: #5a2b0d;/*цвет шрифта*/
   box-shadow: inset 10px 10px 50px 0px #ccb07d;
+}
+body > div.sidebar > div:nth-child(3){
+  display: flex;
+  justify-content: center;
 }
 /*Наведение на кнопки*/
 #recipe-list button:hover, [id^='buttonCountMinus-']:hover, [id^='buttonCountPlus-']:hover
@@ -271,9 +274,12 @@ label[for="search-box"] {
       <div id="numberCounter">
         <p>Найдено по запросу: </p><div id="numberOfRecipes"></div>
       </div>
+      <div>
+        <button id="reset-filters">Сбросить фильтры</button>
+      </div>
     </div>
     <!--content/контент-->
-    <div class="content">  
+    <div class="content" id="top-content">  
             
       <!--ФИЛЬТРЫ-->
       <div id="search-section">
@@ -330,7 +336,6 @@ label[for="search-box"] {
       <p>НАШИ СОЦИАЛЬНЫЕ СЕТИ</p>
       <ul class="social-media-list">
         <li><a href="https://www.instagram.com"><img src="icons/insta.png" alt="Instagram" title="Instagram"></a></li>
-        <li><a href="https://web.whatsapp.com"><img src="icons/wt.png" alt="WhatsApp" title="WhatsAp"></a></li>
         <li><a href="https://web.telegram.org"><img src="icons/tg.png" alt="Telegram" title="Telegram"></a></li>
         <li><a href="https://www.facebook.com"><img src="icons/facebook.png" alt="facebook" title="facebook"></a></li>
         <li><a href="https://vk.com"><img src="icons/vk.png" alt="VK" title="VK"></a></li>
